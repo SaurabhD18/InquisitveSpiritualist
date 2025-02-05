@@ -2,11 +2,11 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,ts,jsx,tsx}", // 👈 Add this
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
-}
-
+  plugins: [require("flowbite/plugin")], // 👈 Ensure Flowbite plugin is added
+};
